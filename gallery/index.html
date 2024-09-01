@@ -10,7 +10,7 @@
 		<h2>Gallery</h2> 
 
 		<div id="image-gallery">
-			<img id="current-image" src="images/image0001.jpg" alt = "Image Gallery Image1">
+			<img id="current-image" src="images/image0001.jpg" alt = "Image Gallery Image0001">
 			<span id="overlay" class="loading-spinner"></span>
 		</div>
 
@@ -33,10 +33,16 @@
 		var currentImage = document.getElementById("current-image");
 
 		let i = 1;
+		// n is the total number of images or less
+		let n = 11;
+
+		// pick a random image to start from 1 to n
+		let startwith = pad ( ( 1 + Math.floor(Math.random() * n) ), 4 );
 
 		var tempImg = new Image();
 		tempImg.onload = function(){
-		  appendImage();
+			currentImage.src = "images/image" + startwith + ".jpg"
+			appendImage();
 		}
 
 		var tryLoadImage = function(){
@@ -74,7 +80,7 @@
 
 			tryLoadImage(i++)
 		}
-		// let n = Math.floor(Math.random() * 10) + 1;
+		
 		tryLoadImage(i);
 	</script>
 </body>

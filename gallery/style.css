@@ -6,14 +6,15 @@ body {
 }
 
 .intro { 
+	/* background: #DCDCDC; */
 	text-align: center;
 	font-family: Arial;
-	/* background: #DCDCDC; */
 }
 
 .grid-container { 
-	text-align: center;
 	/* background: #DCDCDC; */
+
+	text-align: center;
 	margin-left: 20px;
 	margin-right: 20px;
 	margin-top: 20px;
